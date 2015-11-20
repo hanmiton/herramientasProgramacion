@@ -28,4 +28,23 @@
 		-git remote add origin <server> (añadir un destino)
 		-git push origin master (subir a repositorio GitHub)
 5.- Html5
+	-<head></head> cotiene todo lo que no se ve como enalces de stilos y javascript y </meta>
+	-<title></title> para poner el titulo que sale en la pestaña
+	-<style src="/path/archivo"><style> ./(donde estamos) ../(regresamos uno) ../../(regresamos varios pasos atas en el path) (se recomienda poner este tipo de etiquetas al final del body para que no sean bloqueantes, se recomienda usar cdn para no usar procesamiento de nuestros servidores)
+	-<script src="/path/archivo"></script> ./(donde estamos) ../(regresamos uno) ../../(regresamos varios pasos atas en el path)
+	-<meta charset="UTF-8"> indicar tipo de codificacion
+	-<body></body> cuerpo de la pagina
+	-<header></header> cabezera
+	-<nav></nav> navegacion
+	-<section></section> agregar una seccion en el dom
+	-<article></article> agrar un articl edentro de un seccion
+	-<aside></aside> parte lateral del dom
+	-<footer></footer> pie de la pagina
+	-<div></div> contenedor tipo caja
+	-<a></a> para poner enlaces(ligas, link)
+	ResponsiveDesign
+		-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	 
 
+    
+    
