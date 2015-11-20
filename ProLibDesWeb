@@ -126,6 +126,17 @@ Nota: Ignorar carpeta node_modules para hacer repositorio en git
 	gulp.task('build',['build:css']);
 	gulp.task('default',['server','watch','build']);
 
+	/****revisar gulp****/
+
+14. gitignore =>ignorar node modules
+	*https://www.youtube.com/watch?v=f1NYnGXbUxg
+	Pasos
+	Crear un archivo en el proyecto raiz
+	.gitignore
+		/node_modules
+
+
+
 
     
     
