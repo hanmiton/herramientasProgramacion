@@ -1,0 +1,29 @@
+1.- Navegador Web (Google Chrome)
+2.- SublimeText2
+	*https://www.youtube.com/watch?v=q3zwVRZAsBI
+		- Install package control
+		- Emment
+		- Stylus
+	*https://www.youtube.com/watch?v=_gs_EIPkMVo
+		- ctrl+P explorar
+		- ctrl+D Selecconar Palabra (puede ser varia veces)
+		- ctrl++ aumente fuente
+		- ctrl-- disminuye fuente
+		- ctrl+shift+P Package control
+		- ctrl+shift+flechas Mover bloques de código arriba abajo
+		- ctrl+l copiar lines distintas
+		- #id, .clases, >elementos_adentro, +hermano, *(#veces)
+3.- Git
+	*http://rogerdudler.github.io/git-guide/index.es.html
+		- git init (iniciar nuevo repo)
+		- git clone /path (clonar un repo)
+		Subir Version
+			- git status (observar situacion)
+			- git add .(añadir cambios stage area)
+			- git commit -m "mensaje" (subir version)
+4.- GitHub
+	*http://rogerdudler.github.io/git-guide/index.es.html
+		-git remote add origin <server> (añadir un destino)
+		-git push origin master (subir a repositorio GitHub)
+5.- Html5
+
