@@ -15,6 +15,8 @@
 		- #id, .clases, >elementos_adentro, +hermano, *(#veces)
 3.- Git
 	*http://rogerdudler.github.io/git-guide/index.es.html
+		- git config --global user.name aaaaa
+		- git config --global user.email aaaa@gmail.com
 		- git init (iniciar nuevo repo)
 		- git clone /path (clonar un repo)
 		Subir Version
