@@ -53,6 +53,19 @@
 		-order: <integer>
 		-flex-grow: <number>; ancho del elemento con respecto al contenedor
 
+7.-Filezilla
+	ftp para subir las paginas web
+8.-Carpetas
+	-Proyecto
+		-src (donde vamos a estar trabajando)
+		-build (donde van estar los archivos compilados y minificados)
+		-dist (donde esta la produccion final)
+9.-Node.js
+	Procesos para empezar con el desarrollo
+10.-Gulp.js
+	npm install gulp -g
+11.-Stylus
+	npm install stylus -g
 	 
 
     
