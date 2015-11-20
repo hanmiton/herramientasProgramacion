@@ -63,10 +63,69 @@
 9.-Node.js
 	Procesos para empezar con el desarrollo
 10.-Gulp.js
-	npm install gulp -g
+	npm install gulp -g (instalar gulp de forma global)
+	gulpfile.js (se lo crea en la archivo raiz)
+	Instalamos en el proyecto las dependencias
+		-npm install gulp --save-dev
+		-npm install --save-dev gulp-webserver
+		-npm install --save-dev gulp-stylus
+		-npm install --save-dev gulp-minify-css
 11.-Stylus
-	npm install stylus -g
-	 
+	npm install stylus -g (instalar sylus de forma global)
+	NIB (Aumenta prefijo para navegadores para que comprendan css)
+		-npm install --save-dev nib
+
+12.-Agregacion de plugins y librerias y dependencias
+	-npm install gulp --save-dev
+	-npm install --save-dev gulp-webserver
+
+Nota: Ignorar carpeta node_modules para hacer repositorio en git
+
+13.- configurar archivo gulpfile.js
+	var gulp = require('gulp');
+	var webserver = require('gulp-webserver');
+	var stylus = require('gulp-stylus');
+	var nib = require('nib');
+	var minifyCSS = require('gulp-minify-css');
+
+	var config = {
+		styles:{
+			main: './src/styles/main.styl',
+			watch : './src/styles/**/*.styl',
+			output: './build/css'
+		},
+		html: {
+			watch: './src/*.html'
+		}
+	}
+
+	gulp.task('server',function(){
+		gulp.src('./build')
+			.pipe(webserver({
+				host: '0.0.0.0',
+				port: 8080,
+				livereload: true
+			}));
+	});
+
+	gulp.task('build:css', function(){
+		gulp.src(config.styles.main)
+			.pipe(stylus({
+				use: nib(),
+				'include css': true
+			}))
+			.pipe(minifyCSS())
+			.pipe(gulp.dest(config.styles.output));
+	});
+
+	gulp.task('watch',function(){
+		gulp.watch(config.styles.watch,['build:css']);
+		gulp.watch(config.html.watch, ['build']);
+
+	});
+	gulp.task('build',['build:css']);
+	gulp.task('default',['server','watch','build']);
+
 
     
     
