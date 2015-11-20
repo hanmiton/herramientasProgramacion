@@ -44,6 +44,15 @@
 	-<a></a> para poner enlaces(ligas, link)
 	ResponsiveDesign
 		-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+6.- Css3
+	Propiedades de los contenedores padres
+		-display: flex;
+		-flex-direction: row; column;
+		-justify-content: flex-start;flex-end;center;space-between;space-around;
+	Propiedades de los elementos
+		-order: <integer>
+		-flex-grow: <number>; ancho del elemento con respecto al contenedor
+
 	 
 
     
