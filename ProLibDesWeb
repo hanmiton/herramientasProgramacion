@@ -12,7 +12,7 @@
 		- ctrl+shift+P Package control
 		- ctrl+shift+flechas Mover bloques de código arriba abajo
 		- ctrl+l copiar lines distintas
-		- #id, .clases, >elementos_adentro, +hermano, *(#veces)
+		- #id, .clases, >elementos_adentro, +hermano, *(#veces), {Enlace $} (escribir texto etiqueta) ($aumenta desde 1 hasta el numero de etiquetas existentes), p[media=hola] para poner los atributos con emment
 3.- Git
 	*http://rogerdudler.github.io/git-guide/index.es.html
 		- git config --global user.name aaaaa
@@ -135,8 +135,97 @@ Nota: Ignorar carpeta node_modules para hacer repositorio en git
 	.gitignore
 		/node_modules
 
+15. Normalize (para igualar los estilos a todos los navegadores)
+	*https://github.com/necolas/normalize.css/
+	*https://raw.githubusercontent.com/necolas/normalize.css/master/normalize.css
 
+	Para importar 
+		-@import './normalize.css' (importa desde main.styl)
+		-@import './reset' (no se necesita poner la extension si es un archivo styl)
+16. Reset.styl
+	div,
+	header,
+	section,
+	article,
+	nav,
+	ul,
+	ol,
+	li,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6
+		margin 0
+		padding 0
+Nota: font-size 16px es el tamaño minimo para la fuente en un movil
+	height 64px nav para dispositivos moviles
 
+17.- Css (Stylus)
+	Principales Estilos
+	font-size (tamaño de la fuente)
+	background-color (color de fondo)
+	color (color del texto)
+	height (alto)
+	width (ancho)
+	position fixed (fijar posicion expecificar top 0 lef 0 (coordenadas))
+	z-indez 10 (capas en el eje z)
+	list-style-type (consultar para que sirve)
+	overflow hidden (cuando existe contenido fuera de un contenedor se lo puede ocultar con overflow aplicar al contenedor de los items)
+	text_decoration (quitar los subrayados y decoraciones de los enlaces)
+	border-radius (poner bordes redondeados css)
+	transition height 0.3s ease (es para dar transicion a un elemento) Nota: 0.3s es aconsejable para que no consuma muchos recursos la transisocno
 
-    
-    
+18.-metodologia bem
+	-elemento
+	--modificador
+
+19.-Media Query
+	@media(min-width: 768px)
+	.header
+		&-btn-nav
+			display none
+
+	Nota: aconsejable primer break point 768px que viene a ser tamaños ya para tablets
+
+20.- Imagenes responsive
+	<section class="content-text">
+		<picture>
+			<source media="(min-width:768px)" srcset="img/img01">
+			<source media="(min-width:320px)" srcset="img/img01-mobile-retina.jpg 2x">
+			<img src="img/img01-mobile.jpg" alt="">
+		</picture>
+	</section>
+	Nota: con 2x se indica si el coputador tiene el doble de densidad e pixel o es retina
+21.- Lazy loading
+	function loadCSS(url){
+			var elem = document.createElement('link');
+			elem.rel = 'stylesheet';
+			elem.href= url;
+			document.head.appendChild(elem);
+		}
+
+22. Browserify
+	npm i -D browserify
+	npm i -D vinyl-buffer vinyl-source-stream
+	(esto es para que trabaje browserify y para mover el ficher donde lo deja por defecto browserify)
+
+21.- Uglify
+	permite modificar el nombre de las clases par que sean mas cortos y asi q pese menos el archivo
+	npm i -D gulp-uglify
+
+22.- PageSpeed Insights
+	Nos permite ver como califica google a nuestra pagina
+
+23.- plugins para optimizacion de imagenes
+
+	npm i -D gulp-image-optimization
+24.- plugins para poner el codigo inline 
+	npm i -D gulp-smoosher
+
+25.- Para usar smoosh
+
+<!--smoosh -->
+	<link rel="stylesheet" href="./css/main.css">
+<!-- endsmoosh-->
