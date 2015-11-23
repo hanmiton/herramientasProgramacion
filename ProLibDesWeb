@@ -229,3 +229,115 @@ Nota: font-size 16px es el tamaño minimo para la fuente en un movil
 <!--smoosh -->
 	<link rel="stylesheet" href="./css/main.css">
 <!-- endsmoosh-->
+
+
+***********ENTORNO DE DESARROLLO**********
+var gulp = require('gulp');
+	Sistema de construcción que permite automatizar tareas comunes de desarrollo
+var webserver = require('gulp-webserver');
+	Webserver local que permite ejecutar nuestro programa en local
+var stylus = require('gulp-stylus');
+	Preprocesador de css3
+var nib = require('nib');
+	Añade los prefijos para que el codigo siva en la mayoria de navegadores
+var minifyCSS = require('gulp-minify-css');
+	Minifica el css
+var browserify = require('browserify');
+	Permite tener codigo modular el cual este se encarga despues de unir y hacer un solo index.html
+var source = require('vinyl-source-stream');
+	Permite modificar el lugar donde guarda broserify
+var buffer = require('vinyl-buffer');
+	Permite modificar el lugar donde guarda broserify
+var uglify = require('gulp-uglify');
+	Permite poner el codigo de javascript en un solo archivo
+var smoosher = require('gulp-smoosher');
+	Permite poner el codigo inline
+var imageop = require('gulp-image-optimization');
+	Permite la optimizaicon de las imagenes
+var config = {
+  styles: {
+    main: './src/styles/main.styl',
+    watch: './src/styles/**/*.styl',
+    output: './build/css'
+  },
+  rutas para construir un solo archivo de styl y final un css
+  html: {
+    watch: './build/*.html'
+  },
+  ruta para escuchar el html que se esta haciendo
+  scripts: {
+    main: './src/scripts/main.js',
+    watch: './src/script/**/*.js',
+    output: './build/js'
+  },
+  rutas para hacer un solo javascript
+  images: {
+    watch: ['./build/img/*.png', './build/img/*.jpg'],
+    output: './dist/img'
+  }
+  ruta par ala optimizacion de las imagenes
+}
+
+gulp.task('server', function() {
+  gulp.src('./build')
+    .pipe(webserver({
+      host: '0.0.0.0',
+      port: 8080,
+      livereload: true
+    }));
+});
+tarea para inicializar el servidor
+
+gulp.task('build:css', function() {
+  gulp.src(config.styles.main)
+    .pipe(stylus({
+      use: nib(),
+      'include css': true
+    }))
+    .pipe(minifyCSS())
+    .pipe(gulp.dest(config.styles.output));
+});
+
+tarea para añadir lo prefijos con nib y hacer un solo archivo css
+
+gulp.task('build:js', function() {
+  return browserify(config.scripts.main)
+    .bundle()
+    .pipe(source('bundle.js'))
+    .pipe(buffer())
+    .pipe(uglify())
+    .pipe(gulp.dest(config.scripts.output));
+});
+
+tarea pra crear un solo archivo de js
+gulp.task('watch', function() {
+  gulp.watch(config.images.watch, ['images']);
+  gulp.watch(config.scripts.watch, ['build:js']);
+  gulp.watch(config.styles.watch, ['build:css']);
+  gulp.watch(config.html.watch, ['build']);
+});
+tarea que pasa revisando o viendo si se modifica alguno de los elementos
+
+gulp.task('images', function() {
+  gulp.src(config.images.watch)
+    .pipe(imageop({
+      optimizationLevel: 5,
+      progressive: true,
+      interlaced: true
+    }))
+    .pipe(gulp.dest(config.images.output));
+});
+
+tarea que permite la optimizacion de las imagenes
+gulp.task('inline', function() {
+  gulp.src('./build/index.html')
+    .pipe(smoosher())
+    .pipe(gulp.dest('./dist'));
+});
+tarea que permite poner el codigo css y js inline en el codigo html
+gulp.task('build', ['build:css', 'build:js', 'images', 'inline']);
+
+corre las tareas anteriormente declaradas
+gulp.task('default', ['server', 'watch', 'build']);
+
+corre las tareas servidor, mirar, construir
