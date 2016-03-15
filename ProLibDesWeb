@@ -341,3 +341,6 @@ corre las tareas anteriormente declaradas
 gulp.task('default', ['server', 'watch', 'build']);
 
 corre las tareas servidor, mirar, construir
+
+26.- Angular
+- Framework de frontend
