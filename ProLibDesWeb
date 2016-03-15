@@ -343,4 +343,31 @@ gulp.task('default', ['server', 'watch', 'build']);
 corre las tareas servidor, mirar, construir
 
 26.- Angular
-- Framework de frontend
+	- Framework de frontend
+	- Local Storage
+		- Variable global dentro del browser windows (mejor practica hacer la inyeccion de window ) 
+		- Inicializar LocalStorage
+			var localStorage = $windows.localstorage;  --revisar video
+			-funciones
+				getItem();
+		Buena practica inicializar arreglo de comentarios como vacio
+			if(!comments){
+				comments = [];
+			}
+			else {
+				comments = JSON.parse(comments);
+			}
+		Parse ---revisar que es
+
+-convertir un json a cadena
+		Json.stringify(comments)
+
+- consultar diferencia entre scope y this
+
+firebug -=> permite hacer debug del codigo y acceder al locarStroage en google chrome viene integrado en las herrameintas de desarrollador
+
+
+?consultar que es inyeccion en angular.js
+ULTIMO MIN 10 VIDEO DE ALMACENAMIENTO DE DATOS EN LOCAL STORAGE
+
+
