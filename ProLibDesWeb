@@ -367,7 +367,25 @@ corre las tareas servidor, mirar, construir
 firebug -=> permite hacer debug del codigo y acceder al locarStroage en google chrome viene integrado en las herrameintas de desarrollador
 
 
+?tipos de directivas
+- tipo E: elemento
+
+-Directivas de angular.js
+	@ campo de texto
+	= binding de angular
+	& esperando una funcion 
+
 ?consultar que es inyeccion en angular.js
-ULTIMO MIN 10 VIDEO DE ALMACENAMIENTO DE DATOS EN LOCAL STORAGE
+
+-angular-md5
+usar filtros de gravatar (permtie usar avatares en comentarios)
+-angualrUI
+contiene muchas diercitas consultar UI-Bootstrap
+-Ui-Bootstrap
+permite usar taba y paginacion
+
+
+
+VIDEO SE PARTE DEL PROEYCTO, TAREAS ADICIONALES DE POKEDES MIN 7
 
 
