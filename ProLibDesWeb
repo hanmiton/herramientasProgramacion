@@ -383,9 +383,39 @@ usar filtros de gravatar (permtie usar avatares en comentarios)
 contiene muchas diercitas consultar UI-Bootstrap
 -Ui-Bootstrap
 permite usar taba y paginacion
+-para interactuar ocn la base de dato susar servcios REST usando un backend
 
 
 
-VIDEO SE PARTE DEL PROEYCTO, TAREAS ADICIONALES DE POKEDES MIN 7
+27.- NoSql
 
+- Not only SQL
+- Sin relaciones(*)
+- Distribuidas
+- Expandibles
+- Intentar no tener relaciones para la distribuicon para mas nodos
+	- Usado de aplicaicones web
+	- Aumento de datos
+	- Esquemas dinámicos (cambiar estructura base de datos facilmente)
+	- Facilidad de interacción 
+?ver que es orm
+Cuando usar?
+- Relaciones debiles
+- Estructuras dinámicas
+
+TIPOS DE BD NOSQL
+- Columnas (Casandra creado por facebook)
+- Documentos (MongoDb parecido a un documetno llave/valor)
+- Llave/valor (redis)
+- Graph (teoria de grafos de ocmo se representa lod datos OrientDb)
+- Multiples modelos (soporte para bases de datos NoSQL)
+- Orientado a objetos ( se guarda tal cual las clases)
+
+
+
+28.- BSON
+- datos binarios muy parecidos a json
+
+
+VER VIDEO DE INTRODUCCION A MONGO D
 
