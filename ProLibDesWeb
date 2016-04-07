@@ -458,6 +458,8 @@ pasos para el proyecto
 git init
 git clone https://github.com/proyectos-mejorandola/pokedex.git
 
+npm install -g grunt-cli
+
 habl
 
 
