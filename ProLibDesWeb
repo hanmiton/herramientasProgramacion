@@ -443,7 +443,7 @@ los comadnosy mas que se encutnrta especificados en las partes superiores
 	el cual contiene todo lo relacionado con las devDependecias licencias  descripcion y scripts que se corretan la principio de la app vesion nombre y etc
 
 -sexto hablar de gruntfile
-	como nos permite un realreload y como automaticas las distintas tareas que deseemos
+	como nos permite un livereload y como automaticas las distintas tareas que deseemos
 	automatizar y no llevarlas acabo maualmente
 
 -septimo hablar de angular y como se piens ausar
