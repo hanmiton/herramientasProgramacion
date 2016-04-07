@@ -419,3 +419,46 @@ TIPOS DE BD NOSQL
 
 VER VIDEO DE INTRODUCCION A MONGO D
 
+
+TEMA DE TESIS
+
+-primero hablar de git y como se va utilizar para el control de versiones de la aplicacon a realziar
+los comadnosy mas que se encutnrta especificados en las partes superiores
+	https://git-scm.com/download/win
+	-hablar de .gitignore para igonarar dependecias de desarroolaldor en la fase de desarrollo
+
+-segundo hablar github y como se piensa usar como repositorio para las distintas versiones de codigo que se vayan generando de la app
+	https://github.com/hanmiton
+
+-tercero hablar de sublime editor de texto que se piensa utlizar para la programacion de la aplicacion
+	https://www.sublimetext.com/3   dsfasdf
+
+-cuarto prerequisitos para trabajar con angular
+	tener instaldo git
+	instalar sumblime text
+	node.js y grunt (para uns ervidor realreload)
+
+-quinto hablar de como se usa node.js que es node.js y como se va utilizar para la conexion con la base dedatos
+	package.json
+	el cual contiene todo lo relacionado con las devDependecias licencias  descripcion y scripts que se corretan la principio de la app vesion nombre y etc
+
+-sexto hablar de gruntfile
+	como nos permite un realreload y como automaticas las distintas tareas que deseemos
+	automatizar y no llevarlas acabo maualmente
+
+-septimo hablar de angular y como se piens ausar
+	Framework mvc (modelo vista controlador)
+	Por equipo de desarrollo de google
+	Busca desarrollar apliciones web que sean modularres e interactivas
+	Permite evitar las librerias y que no tengan relacion alguana ya que angular.js es un framewoek entero
+	Estructurar app de una manera mas modular y sencilla
+
+
+pasos para el proyecto
+git init
+git clone https://github.com/proyectos-mejorandola/pokedex.git
+
+habl
+
+
+
