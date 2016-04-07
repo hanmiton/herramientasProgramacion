@@ -458,9 +458,12 @@ pasos para el proyecto
 git init
 git clone https://github.com/proyectos-mejorandola/pokedex.git
 
-npm install -g grunt-cli
+para poder corre grunt y l servidor livereload
+	npm install -g grunt-cli
 
-habl
+ir a revisar 
+	metodologias de programacion 
+	limitaciones que teine mi proyecto
 
 
 
